@@ -29,11 +29,8 @@ button{
   color: #fff;
   background-color: #D85F30;
   border: none;
-  border-radius: 2px;
-  height: 36px;
-  line-height: 36px;
+  border-radius: 7px;
   padding: 0 2rem;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -72,7 +69,7 @@ table td:last-child {
   overflow-y: hidden;
   height: 100%;
   width: 100%;
-  background-color: #4D727B;
+  background-color: #2E4348;
 }
 
 .select-character-block
