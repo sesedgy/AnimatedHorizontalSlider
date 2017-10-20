@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/example.css" />
+</head>
+<body>
+    <div id="selectCharacter" class="select-character" style="">
+        <div class="select-character-block" style="width: 10%;display:inline-block">
+            <a onclick="" href="#" style="float: left"><img style="height:150px; width:150px; " src="images/arrow-point-to-left.png"/></a>
+        </div>
+        <div class="select-character-block" style="width: 79%;display:inline-block">
+            <h1>SELECT CHARACTER</h1>
+            <h4>Anna Lukanina</h4>
+            <div class="character"></div>
+            <div id="characteristicsPanel">
+                <h4>Сharacteristics</h4>
+                <div class="characteristics-list">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td style="width:150px"></td>
+                            <td>BEGINNER</td>
+                            <td>FAMILIAR</td>
+                            <td>PROFICIENT</td>
+                            <td>EXPERT</td>
+                            <td>MASTER</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Adobe InDesign</td>
+                            <td colspan="5">
+                                <div class="horizontal-bar"></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>Additional information</h4>
+                </div>
+            </div>
+            <button href="#" onclick="startLife()"><b>START</b></button>
+        </div>
+        <div style="width: 10%;display:inline-block;">
+            <a onclick="" href="#" style="float: right" ><img style="height:150px; width:150px;" src="images/arrow-point-to-right.png"/></a>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="startLife" style="visibility: hidden">
+        <div class="horizon scroll">
+        </div>
+
+        <div class="middle scroll">
+            <div style=" position: absolute; top: 100px; left: 600px; height: 30px; width: 30px; background-color: red"></div>
+            <img src="images/middle.png" alt="" />
+        </div>
+
+        <div class="front scroll">
+            <img src="images/front.png" alt="" />
+            <div class="front-grass"></div>
+            <div class="front-earth"></div>
+            <div class="character"></div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.jInvertScroll.min.js"></script>
+    <script src="scripts/scroll.js"></script>
+</body>
+</html>
