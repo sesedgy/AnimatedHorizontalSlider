@@ -6,60 +6,67 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/example.css" />
+    <link rel="stylesheet" href="css/front.layer.css" />
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 <body>
-    <div id="selectCharacter" class="select-character" style="">
-        <div class="select-character-block" style="width: 10%;display:inline-block">
-            <a onclick="" href="#" style="float: left"><img style="height:150px; width:150px; " src="images/arrow-point-to-left.png"/></a>
-        </div>
-        <div class="select-character-block" style="width: 79%;display:inline-block; background-color: #4D727B">
-            <h1>SELECT CHARACTER</h1>
-            <div style="box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
-                <div style="display:inline-block"">
-                    <h4>Anna Lukanina</h4>
-                    <div class="character"></div>
-                </div>
-                <div id="characteristicsPanel" style="box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); display:inline-block">
-                    <h4>СHARACTERISTICS</h4>
-                    <div class="characteristics-list">
-                        <table>
-                            <thead>
-                            <tr>
-                                <td style="width:150px"></td>
-                                <td>BEGINNER</td>
-                                <td>FAMILIAR</td>
-                                <td>PROFICIENT</td>
-                                <td>EXPERT</td>
-                                <td>MASTER</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Adobe InDesign</td>
-                                <td colspan="5">
-                                    <div class="horizontal-bar"></div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <h4>Additional information</h4>
-                    </div>
-                </div>
+    <div id="selectCharacter" class="select-character">
 
+
+        <h1>SELECT CHARACTER</h1>
+            <h4>Anna Lukanina</h4>
+        <div class="skills-panel">
+            <div class="skills-table" style="height: 256px;">
+                <div class="skills-row" style="position: absolute; left: 120px;">
+                    <div class="skills-column" style="margin-right: 20px;">BEGINNER</div>
+                    <div class="skills-vertical-line skills-column" style="margin-right: 30px;"></div>
+                    <div class="skills-column" style="margin-right: 30px;">PROFICIENT</div>
+                    <div class="skills-vertical-line skills-column" style="margin-right: 30px;"></div>
+                    <div class="skills-column">MASTER</div>
+                </div>
+                <div class="skills-row"></div>
+                <div class="skills-row">
+                    <div class="skills-column">Photoshop</div>
+                    <div class="skill-level skills-column" style="width: 130px;"></div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-column">InDesign</div>
+                    <div class="skill-level skills-column" style="width: 170px;"></div>
+                </div>
+                <div class="skills-row">
+                    <div class="skills-column">Illustrator</div>
+                    <div class="skill-level skills-column" style="width: 230px;"></div>
+                </div>
+                <div class="skills-row">
+                    <div>Additional information:</div>
+                    <div style="height: 70px; width: 500px;border-radius: 6px; background-color: #ffeec1;"><p style="padding:8px; margin-top: 5px">End musical school, like caligraphy and read books, etc.</p></div>
+                </div>
             </div>
-            <button onclick="startLife()" style="font-size: 50px;">START</button>
+            <button onclick="startLife()" class="skill-btn">SELECT</button>
         </div>
-        <div style="width: 10%;display:inline-block;">
-            <a onclick="" href="#" style="float: right" ><img style="height:150px; width:150px;" src="images/arrow-point-to-right.png"/></a>
+
+        <div class="rotateslider-container" id="slider">
+            <div class="rotateslider-item"><img src="images/horizon/cloud.png"></div>
+            <div class="rotateslider-item"><img class="disabled" src="images/horizon/cloud2.png"></div>
+            <div class="rotateslider-item"><img class="disabled" src="images/horizon/cloud3.png"></div>
+            <span class="arrow right js-rotateslider-arrow" data-action="next" onclick="clickSelectArrow()"></span>
+            <span class="arrow left js-rotateslider-arrow" data-action="prev" onclick="clickSelectArrow()"></span>
         </div>
+
     </div>
-
-
-
 
 
     <div id="startLife" style="visibility: hidden">
         <div class="horizon scroll">
+            <div class="cloud" style="left: 300px; top: 135px;">
+                <img class="cloud-image" src="images/horizon/cloud.png">
+            </div>
+            <div class="cloud" style="left: 1156px; top: 336px;">
+                <img class="cloud-image" src="images/horizon/cloud2.png">
+            </div>
+            <div class="cloud" style="left: 2430px; top: 201px;">
+                <img class="cloud-image" src="images/horizon/cloud3.png">
+            </div>
         </div>
 
         <div class="middle scroll">
@@ -71,12 +78,16 @@
             <img src="images/front.png" alt="" />
             <div class="front-grass"></div>
             <div class="front-earth"></div>
-            <div class="character"></div>
+            <div class="character">
+                <img id="characterImage" class="character-image" src="images/character/character-to-right.png">
+            </div>
         </div>
     </div>
 
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/jquery.jInvertScroll.min.js"></script>
+    <script src="scripts/jquery.rotateSlider.js"></script>
     <script src="scripts/scroll.js"></script>
+    <script src="scripts/character.js"></script>
 </body>
 </html>

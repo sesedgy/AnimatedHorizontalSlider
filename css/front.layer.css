@@ -1,0 +1,27 @@
+.front {
+    z-index: 1000;
+    width: 10000px;
+}
+
+.character {
+    z-index: 10000;
+    position: absolute;
+    bottom: 230px;
+    height: 200px;
+    width: 200px;
+}
+
+.character-image{
+    height: 100%;
+    width: 100%;
+}
+
+.front-grass{
+    height: 60px;
+    background-color: #7ADEA8;
+}
+
+.front-earth{
+    height: 170px;
+    background-image: url(../images/land.png);
+}

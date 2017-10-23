@@ -19,5 +19,17 @@ function startLife() {
 $(document).ready(function () {
     $('.character').css('left', $(window).width()/2 - $('.front').position().left);
     $(document.body).css('overflow-y', 'hidden');
+    $('#slider').rotateSlider({});
 });
 
+function clickSelectArrow() {
+    setTimeout(function() {
+        if($('.now').children().hasClass('disabled')) {
+            $('.skills-panel').addClass('disabled');
+        }else{
+            $('.skills-panel').removeClass('disabled');
+        }
+    }, 10);
+
+
+}

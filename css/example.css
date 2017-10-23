@@ -1,14 +1,12 @@
 /* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
-body
-{
+body {
   overflow-x: hidden;
   /*background: url('../images/bg.jpg') repeat top left;*/
   padding: 0;
   margin: 0;
 }
 
-h1
-{
+h1 {
   font-size: 50px;
   font-weight: normal;
   font-family: 'Roboto', sans-serif;
@@ -16,8 +14,7 @@ h1
   color: white;
 }
 
-h4
-{
+h4 {
   font-size: 20px;
   font-weight: normal;
   font-family: 'Roboto', sans-serif;
@@ -25,13 +22,12 @@ h4
   color: white;
 }
 
-button{
-  color: #fff;
-  background-color: #D85F30;
-  border: none;
-  border-radius: 7px;
-  padding: 0 2rem;
-  cursor: pointer;
+div {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -57,23 +53,21 @@ table td:last-child {
   * important: keep position fixed, you can however use top:0 instead of bottom:0
   * if you want to make it stick to the top of the browser
   */
-.scroll
-{
+.scroll {
   position: fixed;
   bottom: 0;
   /*left: 0;*/
 }
 
-.select-character
-{
+/*select character*/
+.select-character {
   overflow-y: hidden;
   height: 100%;
   width: 100%;
-  background-color: #2E4348;
+  background-color: #D5C395;
 }
 
-.select-character-block
-{
+.select-character-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,48 +79,95 @@ table td:last-child {
   background-color: black;
 }
 
+.skills-panel{
+  position: absolute;
+  left: 1191px;
+  top: 396px;
+  width: 502px;
+  height: 302px;
+  padding:10px;
+  background-color: #F0DFB4;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 2;
+  /*-webkit-filter: blur(5px);*/
+  /*filter: blur(5px);*/
+}
 
-.horizon
-{
+.skills-row{
+  height: 40px;
+}
+
+.skills-column{
+  display:inline-block;
+  vertical-align: top;
+  width: 90px;
+}
+
+.skills-vertical-line{
+  height: calc(100% * 4); /*multiplication on count of rows*/
+  width: 2px;
+  background-color: #f7f7f7;
+  position: relative;
+  z-index:0;
+}
+
+.skill-level{
+  margin-left: 25px;
+  margin-top: 8px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: green;
+  position: relative;
+  z-index:1;
+}
+
+.skill-btn{
+  position: absolute;
+  color: #fff;
+  background-color: #D85F30;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14pt;
+  margin-top: 10px;
+  height: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+  left: 413px;
+}
+
+.skill-btn:active {
+  background-color: #b0532e;
+}
+
+
+
+
+/*horizon*/
+.horizon {
   z-index: 1;
-  width: 2000px;
+  width: 3000px;
   height: 100%;
   background-color: #a3f5ff;
 }
 
-.cloud
-{
+.cloud {
   z-index: 2;
-}
-
-.middle
-{
-  z-index: 100;
-  width: 4000px;
-}
-
-.front
-{
-  z-index: 1000;
-  width: 6000px;
-}
-
-.character
-{
-  z-index: 10000;
+  height: 150px;
+  width: 250px;
   position: absolute;
-  bottom: 230px;
-  height: 30px;
-  width: 30px;
-  background-color: red
 }
 
-.front-grass{
-  height: 60px;
-  background-color: #7ADEA8;
+.cloud-image {
+  height: 100%;
+  width: 100%;
 }
 
-.front-earth{
-  height: 170px;
-  background-color: #8D5C4B;
+
+
+
+/*middle*/
+.middle {
+  z-index: 100;
+  width: 7000px;
 }
